@@ -1,0 +1,80 @@
+<!--Preferred browser is Chrome-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Title of page-->
+		<title>Add Supplier</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="ProjectCSS.css">
+		<script src="AddDrug.js"></script>
+
+		<?php include('AddSuplier.php'); ?>
+	</head>
+
+	<body>
+	<nav>
+		<a class="w3-bar-item w3-button w3-hover-black w3-right"></a>
+	    <div class="w3-top">
+	    <a href="about.html" class="w3-bar-item w3-button"><i class="fa fa-folder-open"></i> File Maintenence </a>
+	    <a href="hobbies.html" class="w3-bar-item w3-button"><i class="fa fa-ambulance "></i> Supplier Accounts</a>
+		<a href="travel.html" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> Stock Control</a>
+	    <a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-bar-chart"></i> Reports</a>
+		<a href="contact.html" class="w3-bar-item w3-button"><i class="fa fa-close"></i> Log Out</a>
+		</div>
+
+		<div align="center" class="w3-content w3-container w3-padding-64" id="about">
+		<h3 class="w3-center">Add A New Supplier</h3>
+	</nav>
+
+
+	<form action="AddDrug.php" method="Post">
+
+	<label> Brand Name</label>
+	<input type="text" name ="supName" id="supName" placeholder="Cardinal Health, inc" autocomplete = on required/><br><br>
+
+	<div class="formElement">
+		<label>Address</label>
+		<input type="text" name ="street" id="street" placeholder="Street" autocomplete=on required/><br><br>
+		<input type="text" name="town" id="town" placeholder="Town" required/><br><br>
+		<input type="text" name="county" id="county" placeholder="County" required/><br><br>
+	</div>
+
+	<div class="formElement">
+		<label>Email Address</label>
+		<input type="text" name="email" id="email" placeholder="example@example.com" required/><br><br>
+	</div>
+
+
+	<div class="formElement">
+		<label>Website Address</label>
+		<input type="text" name="website" id="website" placeholder="www.example.com" autocomplete=on required/><br><br>
+	</div>
+
+
+	<div class="formElement">
+		<label>Telephone Number</label>
+		<input type="text" name="teleNum" id="teleNum" placeholder="+383 00 000 0000" autocomplete=on required/><br><br>
+	</div>
+	<br>
+
+	<input type="submit" value="Submit"/>
+	<input type="reset" value="Clear"/>
+
+	</form>
+
+		<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+	  	<a href="addSupplier.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+	  	<div class="w3-xlarge w3-section">
+	  	</div>
+		<p>© Copyright - pH Pharmacy</p>
+		<p>The content on this site is meant for informational purposes only, and is not intended for use as official health consultation <br> or recommendations.
+		pH Pharmacy takes no responsibility for harm that may result from the use, abuse or misuse of information contained on this site.</p>
+		</footer>
+
+	</body>
+</html>
