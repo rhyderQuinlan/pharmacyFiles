@@ -1,0 +1,189 @@
+body, html {
+  font-family: "Lato", sans-serif;
+	height: 100%;
+	background: url(homepage_Image.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+#wrap {
+  min-height: 90%;
+}
+
+#main h1 {
+  font-size: 3.5rem;
+}
+
+div.main_container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+div.main_container h1 {
+  font-size: 5rem;
+}
+
+#footer {
+	position: relative;
+	margin-top: -141px;
+	height: 140px;
+	clear: both;
+}
+
+.w3-wide {
+	letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+	cursor: pointer;
+}
+
+.container a {
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/*Code for Login pop up*/
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); Black w/ opacity 
+    padding-top: 20px;
+}
+
+.form_container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+    padding-right: 20px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    align-self: center;
+}
+
+/*Pop up content box*/
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 50%;
+    padding-bottom: 2rem;
+}
+
+/*The login button*/
+.full_width_button: hover {
+  background-color: #96BABE;
+}
+
+.full_width_button {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  align-self: center;
+  background-color: #A5CCD1;
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* The Close Button */
+.close {
+    /*Positioned top right of pop up */
+    position: absolute;
+    right: 2%;
+    top: -20px;
+    color: #000;
+    font-size: 35px;
+}
+
+ /*Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+ /*Zoom animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+.cancelbtn {
+  background-color: #EE2B30;
+  padding: 12px 20px;
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/*Responsiveness section - adapting content to screen size */
+@media (max-width: 1041px) {
+   #footer p {
+    width: 700px;
+    align-content: center;
+    margin: auto;
+   }
+}
+
+@media (max-width: 829px) {
+  #main h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 745px) {
+  #footer p {
+    font-size: 0.5rem;
+    width: 400px;
+   }
+}
