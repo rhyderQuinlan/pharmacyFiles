@@ -1,5 +1,5 @@
 body,h2,h3 {font-family: "Lato", sans-serif;}
-	body, html 
+	body, html
 	{
 		height: 100%;
 		color: #777;
@@ -8,39 +8,39 @@ body,h2,h3 {font-family: "Lato", sans-serif;}
 		.w3-wide {letter-spacing: 10px;}
 		.w3-hover-opacity {cursor: pointer;}
 	}
-	
-	
-	.bgimg-1, .bgimg-2, .bgimg-3 
+
+
+	.bgimg-1, .bgimg-2, .bgimg-3
 	{
 		display: block;
-		
+
 		margin-left: auto;
 		margin-right: auto;
 		background-size: 100%;
 		background-repeat: no-repeat;
-	
+
 	}
-	.bgimg-1 
+	.bgimg-1
 	{
 		background-image: url("images/yo.jpg");
 		height: 100%;
 		width:100%;
-		
-		
+
+
 
 	}
 	.w3-wide {letter-spacing: 10px;}
 	.w3-hover-opacity {cursor: pointer;}
-	
-	
-	
+
+
+
 	#header_ph {
 		position: relative;
 		left: 38%;
 		top: 10px;
-		
+
 	}
-	
+
 #table
 {
 		padding:100px;
@@ -52,9 +52,29 @@ body,h2,h3 {font-family: "Lato", sans-serif;}
 }
 
 .formElement {
-	position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+	margin: auto;
+	width: 350px;
+	align-content: center;
+}
+
+.formElement label {
+	float: left;
+}
+
+.formElement input {
+	float: right;
+}
+
+.button {
+	padding: 50px;
+	margin: auto;
+	width: 400px;
+}
+
+.button input [type=submit] {
+	padding-right: 20%;
+}
+
+.button input [type=reset] {
+	padding-left: 20%;
 }
