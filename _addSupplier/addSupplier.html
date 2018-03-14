@@ -1,19 +1,26 @@
-<!--Preferred browser is Chrome-->
+<!-- Author: Rhyder Quinlan
+ 		 Organisation: IT Carlow
+	 	 Sanctioned and Tutored by Catherine Maloney-->
+<!-- Responsiveness of page is incomplete, orginal design is built on a full screen 1920x1080 px screen -->
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--Title of page-->
 		<title>Add Supplier</title>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="../../w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" type="text/css" href="../../Website.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="ProjectCSS.css">
-		<script src="AddDrug.js"></script>
 
-		<? php include('addSupplier.php') ?>
+		<script>
+			function clicked(e)
+			{
+				if(!confirm('Confirm Details?'))e.preventDefault();
+			}
+		</script>
+
 	</head>
 
 	<body>
@@ -28,57 +35,90 @@
 		</div>
 
 		<div align="center" class="w3-content w3-container w3-padding-64" id="about">
-		<h3 class="w3-center">Add A New Supplier</h3>
+		</div>
 	</nav>
 
-
-	<form action="addSupplier.php" method="post">
+<!-- Add Supplier form area -->
+<h3 class="w3-center">Add A New Supplier</h3><hr /><br />
+<form action="addSupplier.php" method="post" onsubmit="return confirm('Confirm Details?')">
 
 	<div class="formElement">
-	<label>Brand Name</label>
-	<input type="text" name ="supName" id="supName" placeholder="Cardinal Health, inc" autocomplete = on required/><br><br>
+	<label>Supplier Name</label>
+	<input type="text" name ="name" id="name"placeholder="Cardinal Health, inc" autocomplete = on required/><br><br>
 	</div>
 
 	<div class="formElement">
 		<label>Address</label>
-		<input type="text" name ="street" id="street" placeholder="Street" autocomplete=on required/><br><br>
-		<input type="text" name="town" id="town" placeholder="Town" required/><br><br>
-		<input type="text" name="county" id="county" placeholder="County" required/><br><br>
+		<input type="text" name ="street" placeholder="Street" autocomplete=on required id="street"/><br><br>
+		<input type="text" name="town" placeholder="Town" required id="town"/><br><br>
+		<select name="county" placeholder="County" required aria-required="true" id="county">
+			<option value="">County</option>
+  		<option value="Antrim">Antrim</option>
+  		<option value="Armagh">Armagh</option>
+			<option value="Carlow">Carlow</option>
+			<option value="Cavan">Cavan</option>
+			<option value="Clare">Clare</option>
+			<option value="Cork">Cork</option>
+			<option value="Derry">Derry</option>
+			<option value="Donegal">Donegal</option>
+			<option value="Down">Down</option>
+			<option value="Dublin">Dublin</option>
+			<option value="Fermanagh">Fermanagh</option>
+			<option value="Galway">Galway</option>
+			<option value="Kerry">Kerry</option>
+			<option value="Kildare">Kildare</option>
+			<option value="Kilkenny">Kilkenny</option>
+			<option value="Laois">Laois</option>
+			<option value="Leitrim">Leitrim</option>
+			<option value="Limerick">Limerick</option>
+			<option value="Longford">Longford</option>
+			<option value="Louth">Louth</option>
+			<option value="Mayo">Mayo</option>
+			<option value="Meath">Meath</option>
+			<option value="Monaghan">Monaghan</option>
+			<option value="Offaly">Offaly</option>
+			<option value="Roscommon">Roscommon</option>
+			<option value="Sligo">Sligo</option>
+			<option value="Tipperary">Tipperary</option>
+			<option value="Tyrone">Tyrone</option>
+			<option value="Waterford">Waterford</option>
+			<option value="Westmeath">Westmeath</option>
+			<option value="Wexford">Wexford</option>
+			<option value="Wicklow">Wicklow</option>
+		</select><br><br>
 	</div>
 
 	<div class="formElement">
 		<label>Email Address</label>
-		<input type="text" name="email" id="email" placeholder="example@example.com" required/><br><br>
+		<input type="email" name="email" placeholder="example@example.com" required id="email"/><br><br>
 	</div>
 
 
 	<div class="formElement">
 		<label>Website Address</label>
-		<input type="text" name="website" id="website" placeholder="www.example.com" autocomplete=on required/><br><br>
+		<input type="url" name="website" placeholder="www.example.com" autocomplete=on id="website"/><br><br>
 	</div>
 
 
 	<div class="formElement">
 		<label>Telephone Number</label>
-		<input type="text" name="teleNum" id="teleNum" placeholder="+383 00 000 0000" autocomplete=on required/><br><br>
+		<input type="tel" name="tel" placeholder="083 000 0000" minlength="12" maxlength="17" autocomplete=on required id="tel"/><br><br />
 	</div>
 	<br>
 
 	<div class="button">
-	<input type="submit" value="Submit"/>
-	<input type="reset" value="Clear"/>
+		<input type="reset" value="Clear" id="reset"/>
+		<input type="submit" value="Submit" id="submit"/><br /><br /><br />
 	</div>
 
-	</form>
+</form>
+<!-- End of Add Supplier form -->
 
-		<footer class="w3-center w3-black w3-padding-64 w3-opacity">
-	  	<a href="addSupplier.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-	  	<div class="w3-xlarge w3-section">
-	  	</div>
-		<p>© Copyright - pH Pharmacy</p>
-		<p>The content on this site is meant for informational purposes only, and is not intended for use as official health consultation <br> or recommendations.
-		pH Pharmacy takes no responsibility for harm that may result from the use, abuse or misuse of information contained on this site.</p>
-		</footer>
+<footer class="w3-center w3-black w3-padding-64 w3-opacity">
+	<p>© Copyright - pH Pharmacy</p>
+	<p>The content on this site is meant for informational purposes only, and is not intended for use as official health consultation or recommendations.<br />
+	pH Pharmacy takes no responsibility for harm that may result from the use, abuse or misuse of information contained on this site.</p>
+</footer>
 
 	</body>
 </html>
