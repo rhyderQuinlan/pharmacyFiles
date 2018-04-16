@@ -1,13 +1,13 @@
 <?php
-	include 'db.inc.php';
+	include '../../db.inc.php';
 
-	$sql = "DELETE FROM Drugs WHERE DrugID = '$_POST[deletesupid]' ";
+	$sql = "UPDATE Supplier SET deleteFlag = true WHERE SupplierID = '$_POST[deletesupid]' ";
 
 		if (!mysqli_query($con,$sql))
 		{
-			die ("Error deleting record" . mysqli_error($con));
+			die ("Error deleting record " . mysqli_error($con));
 		}
-	else
+		else
 		{
 			if (mysqli_affected_rows($con) != 0)
 			{
@@ -18,7 +18,8 @@
 				".$_POST['deletesuploc']."
 				".$_POST['deletesuptel']."
 				".$_POST['deletesupemail']."
-				".$_POST['deletesupweb']." has been updated";
+				".$_POST['deletesupweb']."
+				".$_POST['deletesupflag']." has been updated";
 			}
 			else
 			{
